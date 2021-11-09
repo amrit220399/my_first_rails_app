@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyFirstRailsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- CSS only -->
+   
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </head>
+
+  <body>
+ 
+    <%= yield %>
+  </body>
+</html>

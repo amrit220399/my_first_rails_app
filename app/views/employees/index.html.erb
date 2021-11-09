@@ -1,0 +1,108 @@
+<div class="container-fluid" >
+<div class="row">
+
+<p id="notice"><%= notice %></p>
+
+<div id="st-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div><!-- /#st-preloader -->
+
+	<section id="employeeContainer">
+		<div class="container-fluid home-bg">
+			<div class="row">
+				<div class="col-md-12 text-center home-page">
+					
+          
+					<h1>Employee Details</h1>
+					<h4>See all the employees in the organization!</h4>
+					<div class="container">
+						<!-- COUNTDOWN -->      
+						<div class="row">
+							<div class="col-sm-12 tk-countdown">
+								<div class="row">
+
+								</div>
+							</div>
+						</div>
+						<!-- /COUNTDOWN -->
+					</div>
+				
+          <div class="col-md-12">
+          <div class="card">
+              <div class="card-header card-header-danger" style="background-color:#0066ff">
+                  <h4 class="card-title " style="color:white">Employees</h4>
+                  <p class="card-category" style="color:white"> Here is the list of all employees!</p>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table">
+                          <thead class="text-primary-dark">
+                          <tr>
+                          <th>Name</th>
+                          <th>Department</th>
+                          <th>Salary</th>
+                          <th>Date of join</th>
+                          <th>Date of leaving</th>
+                          <th>Deptid</th>
+                          <th colspan="3"></th>
+                        </tr>
+                          </thead>
+
+                          <tbody>
+                          <% @employees.each do |employee| %>
+                            <tr>
+                              <td><%= employee.emp_name %></td>
+                              <td><%= employee.department %></td>
+                              <td><%= employee.salary %></td>
+                              <td><%= employee.date_of_join %></td>
+                              <td><%= employee.date_of_leaving %></td>
+                              <td><%= employee.deptID %></td>
+                              <td>
+                                <button class="mdc-button mdc-button--outlined" id="myBtn">
+                                <%= link_to 'Show', employee, class: "btn" %>
+                              </button>
+                              </td>
+                              <td>
+                              <button class="mdc-button mdc-button--outlined"  id="myBtn">
+                              <%= link_to 'Edit', edit_employee_path(employee),class:"btn" %>
+                              </button>
+                              </td>
+                              <td>
+                              <button class="mdc-button mdc-button--outlined"  id="myBtn">
+                             <%= link_to 'Destroy', employee, class:"btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+                              </button>
+                              </td>
+                            </tr>
+                          <% end %>
+                          </tbody>  
+                      </table>
+                      <br>
+                      <button class="mdc-button mdc-button--outlined" >
+                      <%= link_to 'New Employee', new_employee_path %>
+                    </button>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>&copy; 2021 <strong></strong>. All Rights Reserved. Designed by <strong><a href="http://templatestock.co" target="_blank">Me</a></strong></p>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+
+

@@ -1,0 +1,126 @@
+<div class="container-fluid">
+<div class="row">
+<p id="notice"><%= notice %></p>
+
+<div id="st-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div><!-- /#st-preloader -->
+
+	<section id="employeeContainer">
+		<div class="container-fluid home-bg">
+			<div class="row">
+				<div class="col-md-12 text-center home-page">
+				
+					<h1>Employee Details</h1>
+					<h4>See all the employees in the organization!</h4>
+					<div class="container">
+						<!-- COUNTDOWN -->      
+						<div class="row">
+							<div class="col-sm-12 tk-countdown">
+								<div class="row">
+
+								</div>
+							</div>
+						</div>
+						<!-- /COUNTDOWN -->
+					</div>
+				
+          <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="card-header card-header-danger" style="background-color:#0066ff">
+                          <h4 class="card-title" style="color:white">View Employees</h4>
+                          <p class="card-category" style="color:white">See Details of employees!</p>
+                      </div>
+                      <div class="card-body">
+                       
+                          <p id="notice"><%= notice %></p>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Name:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @employee.emp_name %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                          <strong>Department:</strong>
+                          </div>
+                          <div class="col-md-2">
+                          <%= @employee.department %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Salary:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @employee.salary %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Date of join:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @employee.date_of_join %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>DeptID:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @employee.deptID %>
+                          </div>
+                          </div>
+                          <h4>
+                         <%= link_to 'Edit', edit_employee_path(@employee) %> |
+                        <%= link_to 'Back', employees_path %>
+                          </h4>
+                          </div>
+                          
+                         
+                        
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  </div>
+
+
+        
+				</div>
+			</div>
+		</div>
+	</section><!-- /#home-page -->
+	
+        
+	
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>&copy; 2021 <strong></strong>. All Rights Reserved. Designed by <strong><a href="http://templatestock.co" target="_blank">Me</a></strong></p>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer --
+
+
+
+
+
+
+
+
+
+
+

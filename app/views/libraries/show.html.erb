@@ -1,0 +1,186 @@
+<div class="container-fluid">
+<div class="row">
+<p id="notice"><%= notice %></p>
+
+<div id="st-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div><!-- /#st-preloader -->
+
+	<section id="home-page">
+		<div class="container-fluid home-bg">
+			<div class="row">
+				<div class="col-md-12 text-center home-page">
+					<div class="main-logo">
+						<a href=""><img src="/assets/logo.png" alt="" /></a>
+					</div>
+					<h1>Library Books Management</h1>
+					<h4>See the available books in the library!</h4>
+					<div class="container">
+						<!-- COUNTDOWN -->      
+						<div class="row">
+							<div class="col-sm-12 tk-countdown">
+								<div class="row">
+
+								</div>
+							</div>
+						</div>
+						<!-- /COUNTDOWN -->
+					</div>
+				
+          <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="card-header card-header-danger" style="background-color:tomato">
+                          <h4 class="card-title" style="color:white">View Book</h4>
+                          <p class="card-category" style="color:white">See Details of Book!</p>
+                      </div>
+                      <div class="card-body">
+                       
+                          <p id="notice"><%= notice %></p>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Name:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @library.name %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                          <strong>Author:</strong>
+                          </div>
+                          <div class="col-md-2">
+                          <%= @library.author %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>ISBN:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @library.isbn %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Publisher:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @library.publisher %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Price:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @library.price %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Pages:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @library.pages %>
+                          </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-md-2">
+                            <strong>Copies:</strong>
+                          </div>
+                          <div class="col-md-2">
+                            <%= @library.copies %>
+                          </div>
+                          </div>
+                         
+                          <%= link_to 'Edit', edit_library_path(@library) %> |
+                          <%= link_to 'Back', libraries_path %>
+                          
+                          </div>
+                          
+                         
+                        
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  </div>
+
+
+        
+				</div>
+			</div>
+		</div>
+	</section><!-- /#home-page -->
+	<!--
+	<section id="service-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="service-title">Feature</h1>
+					<div class="service-aro-icon">
+						<div class="service-aro-left"></div>
+							<i class="fa fa-gift"></i>
+						<div class="service-aro-right"></div>
+					</div>
+					<h2>Our feature service</h2>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-laptop"></i>
+					<h3>Web</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-picture-o"></i>
+					<h3>Graphic</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-rocket"></i>
+					<h3>Marketing</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-shopping-cart"></i>
+					<h3>E-Commerce</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section><!-- /#service-page -->
+        
+	
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>&copy; 2021 <strong></strong>. All Rights Reserved. Designed by <strong><a href="http://templatestock.co" target="_blank">Me</a></strong></p>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+
+	
+	
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  manufacturer: MyString
+  date_of_purchase: 2021-10-29
+  owner: one
+  rc_number: MyString
+
+two:
+  model: MyString
+  manufacturer: MyString
+  date_of_purchase: 2021-10-29
+  owner: two
+  rc_number: MyString

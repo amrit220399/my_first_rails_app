@@ -1,0 +1,185 @@
+<div class="container-fluid">
+<div class="row">
+<p id="notice"><%= notice %></p>
+
+<div id="st-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div><!-- /#st-preloader -->
+
+	<section id="home-page">
+		<div class="container-fluid home-bg">
+			<div class="row">
+				<div class="col-md-12 text-center home-page">
+					
+          
+					<h1>Library Books Management</h1>
+					<h4>See the available books in the library!</h4>
+					<div class="container">
+						<!-- COUNTDOWN -->      
+						<div class="row">
+							<div class="col-sm-12 tk-countdown">
+								<div class="row">
+
+								</div>
+							</div>
+						</div>
+						<!-- /COUNTDOWN -->
+					</div>
+				
+          <div class="col-md-12">
+          <div class="card">
+              <div class="card-header card-header-danger" style="background-color:tomato">
+                  <h4 class="card-title " style="color:white">Books</h4>
+                  <p class="card-category" style="color:white"> Here is the list of all books!</p>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table">
+                          <thead class="text-primary-dark">
+                              <th>
+                                  Name
+                              </th>
+                              <th>
+                                  Author
+                              </th>
+                            
+                              <th>
+                                  ISBN
+                              </th>
+                              <th>
+                                 Publisher
+                            </th>
+                            <th>
+                            Price
+                       </th>
+                       <th>
+                            Pages
+                       </th>
+                       <th>
+                            Copies
+                       </th>
+                          
+                          </thead>
+                          <tbody>
+                          <% @libraries.each do |library| %>
+                              <tr>
+                              <td><%= library.name %></td>
+                              <td><%= library.author %></td>
+                              <td><%= library.isbn %></td>
+                              <td><%= library.publisher %></td>
+                              <td><%= library.price %></td>
+                              <td><%= library.pages %></td>
+                              <td><%= library.copies %></td>
+                              
+                              <td>
+                              <button class="mdc-button mdc-button--outlined">
+                              
+                                <%= link_to 'Show', library, class: "btn" %>
+                              
+                                
+                              </button>
+                            </td>
+                            <td>
+                              <button class="mdc-button mdc-button--outlined">
+                          
+                                <%= link_to 'Edit', edit_library_path(library) , class: "btn" %>
+                               
+                               
+                              </button>
+                            </td>
+                              <td>
+                                <button class="mdc-button mdc-button--outlined" >
+                                
+                                  <%= link_to 'Destroy', library,  class: "btn", method: :delete, data: { confirm: 'Are you sure?' }
+								    %>
+                                 
+                                 
+                                
+                                </button>
+                              </td>
+                           
+                              </tr>
+                              <% end %> 
+                          </tbody>
+                         
+                      </table>
+                      <br>
+
+                      <button class="mdc-button mdc-button--outlined" >
+                      <%= link_to 'New Book', new_library_path, class: "btn btn-danger" %>
+               
+                
+                     
+                    
+                    </button>
+  
+                       
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+        
+				</div>
+			</div>
+		</div>
+	</section><!-- /#home-page -->
+	<!--
+	<section id="service-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="service-title">Feature</h1>
+					<div class="service-aro-icon">
+						<div class="service-aro-left"></div>
+							<i class="fa fa-gift"></i>
+						<div class="service-aro-right"></div>
+					</div>
+					<h2>Our feature service</h2>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-laptop"></i>
+					<h3>Web</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-picture-o"></i>
+					<h3>Graphic</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-rocket"></i>
+					<h3>Marketing</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center service">
+					<i class="fa fa-shopping-cart"></i>
+					<h3>E-Commerce</h3>
+					<p>Lorem ipsum dolor sit amet ectetur sicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section><!-- /#service-page -->
+        
+	
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>&copy; 2021 <strong></strong>. All Rights Reserved. Designed by <strong><a href="http://templatestock.co" target="_blank">Me</a></strong></p>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+
+	
+	
+    
+

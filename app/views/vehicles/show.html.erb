@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @vehicle.model %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @vehicle.manufacturer %>
+</p>
+
+<p>
+  <strong>Date of purchase:</strong>
+  <%= @vehicle.date_of_purchase %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @vehicle.owner %>
+</p>
+
+<p>
+  <strong>Rc number:</strong>
+  <%= @vehicle.rc_number %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

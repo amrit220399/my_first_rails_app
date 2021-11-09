@@ -1,0 +1,116 @@
+<div class="container-fluid">
+<div class="row">
+<p id="notice"><%= notice %></p>
+
+	<section id="employeeContainer">
+		<div class="container-fluid home-bg">
+			<div class="row">
+				<div class="col-md-12 text-center home-page">
+				
+					<h1>Employee Details</h1>
+					<h4>See all the employees in the organisation!</h4>
+					<div class="container">
+						<!-- COUNTDOWN -->      
+						<div class="row">
+							<div class="col-sm-12 tk-countdown">
+								<div class="row">
+
+								</div>
+							</div>
+						</div>
+						<!-- /COUNTDOWN -->
+					</div>
+				
+          <div class="col-md-12">
+          <div class="card">
+              <div class="card-header card-header-danger" style="background-color:#0066ff">
+                  <h4 class="card-title " style="color:white">Employees</h4>
+                  <p class="card-category" style="color:white">Create or Update Employee Record!</p>
+              </div>
+              <div class="card-body">
+             <%= form_with(model: employee, local: true) do |form| %>
+                  <% if employee.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+                      <ul>
+                      <% employee.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                      <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
+              
+                <div class="row">
+                      <div class="col-md-1">
+                        <%= form.label :emp_name %>
+                      </div>
+                      <div class="col-md-3">
+                  <%= form.text_field :emp_name %>
+                      </div>
+                </div>
+              
+                <div class="row">
+                <div class="col-md-1">
+                <%= form.label :department %>
+              </div>
+              <div class="col-md-3">
+              <%= form.text_field :department %>
+              </div>   
+                </div>
+              
+                <div class="row">
+                <div class="col-md-1">
+                <%= form.label :salary %>
+              </div>
+              <div class="col-md-3">
+              <%= form.text_field :salary %>
+              </div>  
+                </div>
+              
+                <div class="row">
+                <div class="col-md-1">
+                <%= form.label :date_of_join %>
+              </div>
+              <div class="col-md-3">
+              <%= form.date_select :date_of_join %>
+              </div>  
+                </div>
+              
+                <div class="row">
+                <div class="col-md-1">
+                <%= form.label :deptID %>
+              </div>
+              <div class="col-md-3">
+              <%= form.number_field :deptID %>
+              </div>  
+              </div>
+                
+                <div class="actions">
+                  <%= form.submit "Add/Update Employee", class: "btn btn-primary" %>
+                </div>
+              <% end %>
+              
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+				</div>
+			</div>
+		</div>
+	</section><!-- /#home-page -->
+
+	
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>&copy; 2021 <strong></strong>. All Rights Reserved. Designed by <strong><a href="http://templatestock.co" target="_blank">Me</a></strong></p>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+ 
